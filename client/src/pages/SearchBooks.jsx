@@ -9,7 +9,7 @@ import {
 } from 'react-bootstrap';
 
 import Auth from '../utils/auth';
-import { searchGoogleBooks } from '../utils/API';
+import { searchGoogleBooks, searchIMDb } from '../utils/API';
 import { saveBookIds, getSavedBookIds } from '../utils/localStorage';
 import {SAVE_BOOK} from '../utils/mutations'
 import { useMutation } from '@apollo/client';
@@ -30,6 +30,10 @@ const SearchBooks = () => {
   useEffect(() => {
     return () => saveBookIds(savedBookIds);
   });
+  useEffect(async()=>{
+const IMDbdata=await searchIMDb("John Wick")
+console.log(IMDbdata)
+  },[])
 
   // create method to search for books and set state on form submit
   const handleFormSubmit = async (event) => {
