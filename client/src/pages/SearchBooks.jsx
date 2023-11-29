@@ -31,7 +31,7 @@ const SearchBooks = () => {
     return () => saveBookIds(savedBookIds);
   });
   useEffect(async()=>{
-const IMDbdata=await searchIMDb("John Wick")
+const IMDbdata=await searchIMDb("Hunger Games")
 console.log(IMDbdata)
   },[])
 
