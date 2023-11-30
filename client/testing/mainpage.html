@@ -8,29 +8,143 @@
 </head>
 <body>
 
-    <header>
-        <h1>LitFlix</h1>
-        <p>Explore Movies Based on Books</p>
-    </header>
+    <nav class="navbar">
+        <div class="container">
+            <img src="./images/LitFlixLogoWhite.png" 
+            width="500"
+            height="400" 
+            alt="LitFlixLogo">
+            <h1>"The Book Is Always Better"</h1>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            
+        </div>
+    </nav>
 
-    <main>
-        <section class="movie-list">
-            <div class="movie-card">
-                <img src="movie1.jpg" alt="Movie 1">
-                <h2>The Great Gatsby</h2>
-                <p>Based on the novel by F. Scott Fitzgerald</p>
-            </div>
+    <div class="container">
+        <aside class="sidebar">
+            <!-- We can add additional links or information in the sidebar -->
+            <h2>Explore</h2>
+            <ul>
+                <li><a href="#movies">Movies</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#tvseries">TV Series</a></li>
+                <!-- Add more sidebar links as needed -->
+            </ul>
+        </aside>
 
-            <div class="movie-card">
-                <img src="movie2.jpg" alt="Movie 2">
-                <h2>The Shawshank Redemption</h2>
-                <p>Based on the novella by Stephen King</p>
-            </div>
+        <main>
+            <section id="movies" class="movie-list">
+                <div class="movie-card">
+                    <img src="./images/GG poster.jpg" alt="Great Gatsby Poster">
+                    <h2>The Great Gatsby</h2>
+                    <p>Based on the novel by F. Scott Fitzgerald</p>
+                </div>
 
-            <!-- Add more movie cards as needed -->
+                <div class="movie-card">
+                    <img src="./images/HarryPotter (1).jpg" alt="Harry Potter Movie Poster">
+                    <h2>Harry Potter</h2>
+                    <p>Based on the 1999 novel by J. K. Rowling</p>
+                </div>
 
-        </section>
-    </main>
+                <div class="movie-card">
+                    <img src="./images/twilight.jpg" alt="Twilight Movie Poster">
+                    <h2>Twilight Saga</h2>
+                    <p>Based on the book series Twilight by Stephenie Meyer</p>
+                </div>
+
+                <!-- Add more movie cards as needed -->
+
+            </section>
+
+            <title>In Theaters Section</title>
+            <style>
+            
+                body {
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                    background-color: #f5f5f5;
+
+                }
+        
+                section {
+                    padding: 10px 10px;
+                }
+        
+                h2 {
+                    color: #2c3e50;
+                }
+        
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                }
+        
+                p {
+                    color: #555;
+                    margin-top: 20px;
+                }
+        
+                button {
+                    background-color: #192a38;
+                    color: #fff;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 4px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                }
+        
+                button:hover {
+                    background-color: #3498db;
+                }
+            </style>
+        </head>
+        <body>
+        
+        
+            <section class="in-theaters">
+                <h1>In Theaters</h1>
+                <img src="./images/HungerGamesPoster.jpg" alt="HungerGamesPoster">
+                <p>Experience the latest blockbuster in theaters now. Immerse yourself in the world of cinema and enjoy the magic of the big screen.</p>
+                <button onclick="window.location.href='https://www.fandango.com/the-hunger-games-the-ballad-of-songbirds-and-snakes-2023-228194/movie-overview'">Show Times on Fandango</button>
+            </section>
+
+            <section id="features" class="features">
+                <h2>Features</h2>
+                <!-- Add feature content here -->
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Contact Us</h2>
+                <form class="ui form">
+                    <div class="field">
+                      <label>First Name</label>
+                      <input type="text" name="first-name" placeholder="First Name">
+                    </div>
+                    <div class="field">
+                      <label>Last Name</label>
+                      <input type="text" name="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="field">
+                      <div class="ui checkbox">
+                        <input type="checkbox" tabindex="0" class="hidden">
+                        <label>I agree to the Terms and Conditions</label>
+                      </div>
+                    </div>
+                    <button class="ui button" type="submit">Submit</button>
+                  </form>
+                <!-- Add more contact form or information here? -->
+            </section>
+        </main>
+    </div>
 
     <footer>
         <p>&copy; 2023 LitFlix</p>
