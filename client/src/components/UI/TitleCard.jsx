@@ -1,6 +1,7 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 
+// this code was injected into the google API
 
 function TitleCard() {
   return (

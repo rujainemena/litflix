@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Container, Col, Form, Button, Row } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
+import { Container, Col, Form, Button, Row, Card, ListGroup } from "react-bootstrap";
 
 import Auth from "../utils/auth";
 import { saveBook, searchGoogleBooks } from "../utils/API";
 import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
+
+
 
 const SearchBooks = () => {
   // create state for holding returned google api data
@@ -80,6 +80,9 @@ const SearchBooks = () => {
     }
   };
 
+
+
+
   return (
     <>
       <div className="text-light bg-dark p-5">
@@ -108,12 +111,12 @@ const SearchBooks = () => {
       </div>
 
       <Container>
-        <h2 className="pt-5">
+        <h3 className="pt-5">
           {searchedBooks.length
             ? `Viewing ${searchedBooks.length} results:`
             : "Search for a book to begin"}
-        </h2>
-        <Row style ={{ padding: "20px"}}>
+        </h3>
+        <Row style={{ padding: "20px" }}>
           {searchedBooks.map((book) => {
             return (
               <Card style={{ margin: "15px", width: "18rem", padding: "5px" }}>
@@ -134,13 +137,11 @@ const SearchBooks = () => {
                   <ListGroup.Item className="small">
                     Author: {book.authors}{" "}
                   </ListGroup.Item>
-                  <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                  <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
                 </ListGroup>
 
                 {Auth.loggedIn() && (
                   <Card.Body>
-                    {/* Save book buttong */}
+                    {/* Save book button */}
                     <Button
                       disabled={savedBookIds?.some(
                         (savedBookId) => savedBookId === book.bookId
