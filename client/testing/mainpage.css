@@ -2,19 +2,71 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #2c3e50;
-}
-
-header {
-    background-color: #2c3e50;
+    background-color: #273746;
     color: #ecf0f1;
-    text-align: center;
-    padding: 1em;
 }
 
-main {
-    margin: 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.navbar {
+    background-color: #192a38;
+    padding: 10px 0;
+    /* background-image: url(./images/Bookshelf-PNG-Clipart.png);
+    opacity: 0.2; */
+}
+
+.navbar h1 {
+    color: #ffd700; /* Mustard */
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar {
+    background-color:#192a38; 
+    color: #ecf0f1;
+    padding: 20px;
+    width: 20%;
+    float: left;
+}
+
+.sidebar h2 {
+    color: white; 
+    
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.main {
+    width: 80%;
+    float: right;
 }
 
 .movie-list {
@@ -27,9 +79,10 @@ main {
     background-color: #ecf0f1;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    box-shadow: 8px 4px 10px #192a38; ;
+    margin: 5px;
     padding: 20px;
-    width: 300px;
+    width: 200px;
     text-align: center;
 }
 
@@ -39,12 +92,32 @@ main {
     border-radius: 4px;
 }
 
-footer {
+.features, .contact {
+    margin-top: 40px;
+}
+
+.footer {
     text-align: center;
     padding: 1em;
     background-color: #2c3e50;
     color: #ecf0f1;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    clear: both;
+}
+
+.in-theaters {
+    background-color:#ffd700;
+    padding: 1
+    0px;
+    
+}
+.in-theaters, h1 {
+    font-size: 30px;
+}
+
+.in-theaters, img {
+    
+}
+
+.contact{
+    background-color: #192a38;
 }
