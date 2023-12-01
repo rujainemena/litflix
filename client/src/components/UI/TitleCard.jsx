@@ -5,7 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 function TitleCard() {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ margin:"auto", width: "18rem", padding: "10px" }}>
       {book.image ? (
         <Card.Img
           src={book.image}
