@@ -5,7 +5,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 
 function TitleCard() {
   return (
-    <Card style={{ margin:"auto", width: "18rem", padding: "10px" }}>
+    <Card style={{ margin: "auto" }}>
       {book.image ? (
         <Card.Img
           src={book.image}
@@ -51,8 +51,8 @@ function TitleCard() {
 
 //original API card CSS framework found in SearchBooks.jsx
 
-  /*return (
-              <Col md="4" key={book.bookId}>
+/*return (
+              <Col style={{ margin: "10px", width: "18rem", padding: "15px" }} md="4" key={book.bookId}>
                 <Card border="dark">
                   {book.image ? (
                     <Card.Img
@@ -87,6 +87,5 @@ function TitleCard() {
                 </Card>
               </Col>
             );*/
-
 
 export default TitleCard;

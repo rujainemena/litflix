@@ -1,5 +1,13 @@
 import { useState, useEffect } from "react";
-import { Container, Col, Form, Button, Card, Row, ListGroup } from "react-bootstrap";
+import {
+  Container,
+  Col,
+  Form,
+  Button,
+  Card,
+  Row,
+  ListGroup,
+} from "react-bootstrap";
 
 import Auth from "../utils/auth";
 import { searchGoogleBooks } from "../utils/API";
@@ -105,17 +113,21 @@ const SearchBooks = () => {
       </div>
 
       <Container>
-        <h2 className="pt-5">
+        <h3 className="pt-5">
           {searchedBooks.length
             ? `Viewing ${searchedBooks.length} results:`
             : "Search for a book to begin"}
-        </h2>
+        </h3>
 
         <Row>
           {searchedBooks.map((book) => {
             return (
-              <Col md="4" key={book.bookId}>
-                <Card style={{ margin:"auto", width: "18rem", padding: "15px" }}>
+              <Col
+                style={{ margin: "10px", width: "18rem", padding: "15px" }}
+                md="4"
+                key={book.bookId}
+              >
+                <Card style={{ margin: "auto" }}>
                   {book.image ? (
                     <Card.Img
                       src={book.image}
@@ -124,7 +136,13 @@ const SearchBooks = () => {
                     />
                   ) : null}
 
-                  <Card.Body styly={{ width: "18rem" ,padding: "15px", textAlign: "center"}}>
+                  <Card.Body
+                    styly={{
+                      width: "18rem",
+                      padding: "15px",
+                      textAlign: "center",
+                    }}
+                  >
                     <Card.Title>{book.title}</Card.Title>
                     <Card.Text>{book.description}</Card.Text>
                   </Card.Body>
