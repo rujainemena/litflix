@@ -55,3 +55,6 @@ export const deleteBook = (bookId, token) => {
 export const searchGoogleBooks = (query) => {
   return fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
 };
+export const searchIMDb = (query) => {
+  return fetch(`https://imdb-api.projects.thetuhin.com/search?query=${query}`).then(Response=>Response.json());
+};
